@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools.packages.find]
+# All the following settings are optional:
+where = ["src"]  # ["."] by default
+include = ["wholebrain*"]  # ["*"] by default
+
+
+[project]
+name = "hoffmann_et_al"
+version= "1.0"
+authors = [
+    {name = "Maximilian Hoffmann", email = "mh@posteo.de"},
+]
+description = ""
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "requests",
+    "numpy",
+    "matplotlib",
+    "scipy",
+    "h5py",
+    "tqdm",
+    "xarray",
+    "numba",
+    "seaborn",
+    "tables",
+    "ipykernel",
+]
+#dynamic = []
