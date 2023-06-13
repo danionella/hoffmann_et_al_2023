@@ -16,7 +16,7 @@ authors = [
     {name = "Maximilian Hoffmann", email = "mh@posteo.de"},
 ]
 description = ""
-readme = "README.md"
+readme = "readme.md"
 requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Python :: 3",
