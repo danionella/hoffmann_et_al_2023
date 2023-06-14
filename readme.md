@@ -3,6 +3,6 @@
 
 The `notebooks` folder contains a jupyter notebook that downloads the data of all animals used in the paper and   generates the main figure panels in the paper from the cell coordinates and delta F/F traces for one of them. 
 
-The notebook also contains code that sets up a suitable environment in google collab and were tested with a google collab pro high memory instance. 
+The notebook also contains code that sets up a suitable environment in google collab and were tested with a google collab pro high memory instance. In case there is a warning about multiple installed and conflicting cupy version this can be ignored. 
 
 The high memory instance is only necessary to compute the pairwise correlations in `Figure_3`, otherwise a regular collab instance is sufficient to perform the analysis. 
