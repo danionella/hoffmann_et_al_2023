@@ -5,4 +5,4 @@ The `notebooks` folder contains 3 jupyter notebooks that generate the main figur
 
 All notebooks contain code that sets up a suitable environment in google collab and were tested with a google collab pro high memory instance. 
 
-The high memory instance is only necessary to compute the pairwise correlations in `Figure_3.ipynb`, otherwise a regular collab instance is sufficient to perform the analysis. 
+The high memory instance is only necessary to compute the pairwise correlations in `Figure_3`, otherwise a regular collab instance is sufficient to perform the analysis. 
