@@ -1,7 +1,7 @@
 # Blazed oblique plane microscopy reveals scale-invariant inference of brain-wide population activity
 
 
-The `notebooks` folder contains a jupyter notebook that downloads the data of all animals used in the paper and generates the main figure panels in the paper from the cell coordinates and delta F/F traces for one of them. 
+The `notebooks` folder contains a jupyter notebook that downloads the data of all recordings used in the paper and generates the main figure panels in the paper from the cell coordinates and delta F/F traces for one of them. 
 
 
 
