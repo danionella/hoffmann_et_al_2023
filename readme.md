@@ -1,13 +1,13 @@
 # Blazed oblique plane microscopy reveals scale-invariant inference of brain-wide population activity
 
 
-The `notebooks` folder contains a jupyter notebook that downloads the data of all recordings used in the paper and generates the main figure panels in the paper from the cell coordinates and delta F/F traces for one of them. 
+The `notebooks` folder contains a jupyter notebook that downloads all calcium-dependent fluorescence traces used in the paper and generates the data panels of figures 3 to 5. 
 
 
 ### Colab
 The notebook contains code that sets up a suitable environment in Google Colab (click here: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/danionella/hoffmann_et_al_2023/blob/main/notebooks/generate_figures.ipynb)). In case there is a warning about conflicting cupy versions, it can be ignored. 
 
-To compute the pairwise correlations in `Figure_3` a pro-instance with an A100 GPU is needed – otherwise a free GPU-powered colab instance is sufficient to perform the analysis. 
+A Colab Pro pro instance with a A100 GPU is needed to compute the pairwise correlations in Figure 3. A free Colab GPU instance is sufficient to perform the analysis of the remaining figures 4 and 5.
 
 
 ### To install software and download the data locally
