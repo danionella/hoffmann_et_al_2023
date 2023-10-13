@@ -198,7 +198,7 @@ def voxelate_regression(s_bins,dff_traces_m,coords,cv_mask ,n_repeats=20,alpha=1
     cix = np.arange(dff_traces_m.shape[1])
 
 
-    for j in tqdm(range(n_repeats)):
+    for j in tqdm(range(n_repeats),leave=False):
         target_cells = np.random.choice(cix, size=n_targets, replace=False)
         predictor_cells = np.setdiff1d(cix, target_cells)
         std_0 = dff_traces_m[:, predictor_cells].std(0).mean()
