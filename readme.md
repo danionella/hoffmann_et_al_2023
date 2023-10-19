@@ -19,7 +19,7 @@ Using [mamba](https://github.com/conda-forge/miniforge#mambaforge) (or conda) as
  mamba install  -q -y -c rapidsai -c conda-forge -c nvidia cucim cuml cupy
  git clone https://github.com/danionella/hoffmann_et_al_2023.git
  pip install --ignore-installed  --quiet ./hoffmann_et_al_2023
- wget "http://gin.g-node.org/danionella/Hoffmann_et_al_2023/raw/master/20230611_export_3.h5" -O data.h5
+ wget "https://gin.g-node.org/danionella/Hoffmann_et_al_2023/raw/5a3146dc108208415f87bf17ebce37d566b28208/20230611_export_3.h5" -O data.h5
 ```
 Hardware requirements: 
   For Figure 3: GPU with memory >= 32 GB
