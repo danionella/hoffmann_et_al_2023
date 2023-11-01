@@ -24,7 +24,7 @@ classifiers = [
 dependencies = [
     "requests",
     "numpy",
-    "matplotlib",
+    "matplotlib==3.7",
     "scipy",
     "h5py",
     "tqdm",
