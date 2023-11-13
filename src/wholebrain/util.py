@@ -126,7 +126,7 @@ def corr_fc(cc, pd,dff_traces_m, min_dist=400, radius_list=[5, 10, 15, 25, 50, 1
     x = cc.flatten()[::dec_factor] * mask.flatten()[::dec_factor]
     mask=cp.array(mask,'single')
 
-    for i, s in enumerate(tqdm(radius_list)):
+    for i, s in enumerate(tqdm(radius_list,leave=False)):
         kernel = (pd <= s).astype('float32')
         kernel = kernel / kernel.sum(0, keepdims=True)
         dff_traces_m_la = dff_traces_m @ cp.array(kernel)
@@ -162,7 +162,7 @@ def pca_run(dff_traces,cv_mask,dims_list,n_repeats=20,n_targets=4000):
     """
     cix = np.arange(dff_traces.shape[1])
     r2_bcvpca = np.zeros((n_repeats, len(dims_list)))
-    for j in tqdm(range(n_repeats)):
+    for j in tqdm(range(n_repeats),leave=False):
         target_cells,predictor_cells=get_target_predictor_split(cix,n_targets)
         r2_bcvpca[j, :] = \
             regression.bcv_pca_dim(cp.array(dff_traces[:, predictor_cells]), cp.array(dff_traces[:, target_cells]), cv_mask,
@@ -235,7 +235,7 @@ def ridge_random(dff_traces,  npreds_list,  cv_mask, n_repeats=20, alpha=100, n_
     r2_rand_pred = np.zeros((n_repeats, len(npreds_list))) * np.nan
     target_cells = np.sort(np.random.choice(cix, size=n_targets, replace=False))
     cix=np.setdiff1d(cix,target_cells)
-    for j in tqdm(range(n_repeats)):
+    for j in tqdm(range(n_repeats),leave=False):
         for k, n_preds in enumerate(tqdm(npreds_list, leave=False)):
             if n_preds>len(cix):
                 r2_rand_pred[j, k]=None
