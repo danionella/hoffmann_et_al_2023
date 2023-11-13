@@ -14,14 +14,30 @@ A Colab Pro pro instance with a A100 GPU is needed to compute the pairwise corre
 
 Using [mamba](https://github.com/conda-forge/miniforge#mambaforge) (or conda) as package manager:
 ```
- mamba create -n hoffmann_et_al
- mamba activate hoffmann_et_al
- mamba install  -q -y -c rapidsai -c conda-forge -c nvidia cucim cuml cupy
+ mamba create -n hoffmannetal -c rapidsai -c conda-forge -c nvidia rapids=23.10 python=3.10 cudatoolkit=11.8
+ mamba activate hoffmannetal 
  git clone https://github.com/danionella/hoffmann_et_al_2023.git
  pip install --ignore-installed  --quiet ./hoffmann_et_al_2023
  wget "https://gin.g-node.org/danionella/Hoffmann_et_al_2023/raw/5a3146dc108208415f87bf17ebce37d566b28208/20230611_export_3.h5" -O data.h5
 ```
+
+A faster but non permanent data repository:
+```
+wget "https://owncloud-ext.charite.de/owncloud/index.php/s/H97Qi8haRYLZu4e/download" -O data.h5
+```
+
+Tested on:
+
+```
+Intel(R) Core(TM) i7-7820X CPU @ 3.60GHz
+Ubuntu 20.04.6 LTS
+125 GB RAM
+NVIDIA GeForce RTX 3090 24GB
+```
+
+
+
 Hardware requirements: 
-  For Figure 3: GPU with memory >= 32 GB
+  For Figure 3: GPU with memory >= 24 GB
   For Figure 4 and 5: GPU with memory >= 16 GB
 

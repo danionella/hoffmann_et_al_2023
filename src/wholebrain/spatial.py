@@ -4,7 +4,7 @@ from . import xpu
 from .xpu import cupy_wrapper, iscupy
 
 
-@cupy_wrapper(['X', 'Y'], dtype='float32')
+@cupy_wrapper(['X', 'Y'], dtype='float64')
 def pdist(X, Y=None, metric='euclidean'):
     if iscupy(X):
         import pylibraft.distance.pairwise_distance

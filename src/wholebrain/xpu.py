@@ -8,8 +8,8 @@ try:
     import cupy as cp
     import cupy as xp
     using_cupy = True
-    import rmm
-    cp.cuda.set_allocator(rmm.rmm_cupy_allocator)
+    from rmm.allocators.cupy import rmm_cupy_allocator
+    cp.cuda.set_allocator(rmm_cupy_allocator)
     from cupyx.scipy import ndimage
 except ImportError as e:
     logging.warning(e)
