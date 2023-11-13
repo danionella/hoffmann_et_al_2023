@@ -26,10 +26,18 @@ A faster but non permanent data repository:
 wget "https://owncloud-ext.charite.de/owncloud/index.php/s/H97Qi8haRYLZu4e/download" -O data.h5
 ```
 
-NVIDIA GeForce RTX 3090
+Tested on:
+
+```
+Intel(R) Core(TM) i7-7820X CPU @ 3.60GHz
+Ubuntu 20.04.6 LTS
+125 GB RAM
+NVIDIA GeForce RTX 3090 24GB
+```
+
 
 
 Hardware requirements: 
-  For Figure 3: GPU with memory >= 32 GB
+  For Figure 3: GPU with memory >= 24 GB
   For Figure 4 and 5: GPU with memory >= 16 GB
 
